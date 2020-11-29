@@ -4,9 +4,7 @@ import HeaderComponent from './HeaderComponent';
 
 function HomeComponent(props) {
     return (
-        <div className='contianer'>
-            <HeaderComponent />
-        </div>
+        <HeaderComponent />
     );
 }
 

@@ -10,9 +10,7 @@ function HeaderComponent(props) {
     }
 
     return (
-        <header>
-            <Navbar />
-        </header >
+        <Navbar />
     );
 }
 

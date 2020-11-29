@@ -4,7 +4,7 @@ import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron, 
 function HeaderComponent(props) {
     const [isNavOpen, setIsNavOpen] = useState(false);
 
-    toggleNav() {
+    const toggleNav = () => {
         setIsNavOpen(!isNavOpen);
     }
 

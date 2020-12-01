@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Navbar.css';
 import Button from './Button';
+import logo from '../assets/images/logo.jpeg';
 
 function Navbar() {
     const [click, setClick] = useState(false);
@@ -11,27 +12,18 @@ function Navbar() {
 
     const toggleMenu = () => setClick(false);
 
-    const toggleButton = () => {
-        if (window.innerWidth <= 960) {
-            setButton(false);
-        } else {
-            setButton(true);
-        }
-    }
-
-    useEffect(() => {
-        toggleButton();
-    }, []);
-
-    window.addEventListener('resize', toggleButton);
 
     return (
         <>
             <nav className="navbar">
                 <div className="navbar-container">
-                    <Link to="/" className="navbar-logo">
-                        Vani Property
-                    </Link>
+                    <div className='row'>
+                        <div className='col-4 col-md-2'>
+                            <Link to="/">
+                                <h1><img src={logo} width='270' height='180' /></h1>
+                            </Link>
+                        </div>
+                    </div>
                     <div className='menu-icon' onClick={handleClick}>
                         <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
                     </div>
@@ -40,16 +32,21 @@ function Navbar() {
                             <Link to='/' className='nav-links' onClick={toggleMenu}>Home</Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/' className='nav-links' onClick={toggleMenu}>Services</Link>
+                            <Link to='/' className='nav-links' onClick={toggleMenu}>Flats</Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/' className='nav-links' onClick={toggleMenu}>Property</Link>
+                            <Link to='/' className='nav-links' onClick={toggleMenu}>Plots</Link>
+                        </li>
+                        <li className='nav-item'>
+                            <Link to='/' className='nav-links' onClick={toggleMenu}>Shops</Link>
+                        </li>
+                        <li className='nav-item'>
+                            <Link to='/' className='nav-links' onClick={toggleMenu}>Upcoming</Link>
                         </li>
                         <li className='nav-item'>
                             <Link to='/' className='nav-links' onClick={toggleMenu}>Contact Us</Link>
                         </li>
                     </ul>
-                    {button && <Button buttonStyle='btn--outline'>Book a Visit Now!</Button>}
                 </div>
             </nav>
         </>

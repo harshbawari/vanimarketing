@@ -15,7 +15,7 @@ function Navbar() {
 
     return (
         <>
-            <nav className="navbar">
+            <nav style={{ backgroundColor: '#c4f2f5' }} className="navbar">
                 <div className="navbar-container">
                     <div className='row'>
                         <div className='col-4 col-md-2'>
@@ -25,7 +25,7 @@ function Navbar() {
                         </div>
                     </div>
                     <div className='menu-icon' onClick={handleClick}>
-                        <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
+                        <i style={{ color: 'black' }} className={click ? 'fas fa-times' : 'fas fa-bars'} />
                     </div>
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                         <li className='nav-item'>

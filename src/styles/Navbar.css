@@ -46,7 +46,11 @@
   }
   
   .nav-item {
-    height: 80px;
+    height: 40px;
+  }
+
+  .nav-item:hover {
+    background-color: #6bd4db;
   }
   
   .nav-links {
@@ -59,7 +63,8 @@
   }
   
   .nav-links:hover {
-    border-bottom: 4px solid #fff;
+    color: white;
+    text-decoration: none;
     transition: all 0.2s ease-out;
   }
   

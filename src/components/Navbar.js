@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Navbar.css';
 import Button from './Button';
+import '../constants/theme.css';
 import logo from '../assets/images/logo.jpeg';
 
 function Navbar() {
@@ -15,7 +16,7 @@ function Navbar() {
 
     return (
         <>
-            <nav style={{ backgroundColor: '#c4f2f5' }} className="navbar">
+            <nav className="navbar primary_background">
                 <div className="navbar-container">
                     <div className='row'>
                         <div className='col-4 col-md-2'>
@@ -44,7 +45,7 @@ function Navbar() {
                             <Link to='/' className='nav-links' onClick={toggleMenu}>Upcoming</Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/' className='nav-links' onClick={toggleMenu}>Contact Us</Link>
+                            <Link to='/contact' className='nav-links' onClick={toggleMenu}>Contact Us</Link>
                         </li>
                     </ul>
                 </div>

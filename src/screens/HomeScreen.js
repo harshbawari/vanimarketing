@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import HeaderComponent from './HeaderComponent';
+import HeaderComponent from '../components/HeaderComponent';
 import HomePageImg from '../assets/images/img.jpg';
 import Img2 from '../assets/images/img2.jpg';
 
 
-function HomeComponent(props) {
+function HomeScreen(props) {
     return (
         <div>
             <HeaderComponent />
@@ -25,4 +25,4 @@ function HomeComponent(props) {
     );
 }
 
-export default HomeComponent;
+export default HomeScreen;

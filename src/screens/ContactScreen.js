@@ -21,11 +21,7 @@ function ContactScreen(props) {
             <hr />
           </div>
           <div className="col-12 col-sm-4 offset-sm-1">
-            <h5>Our Address</h5>
             <address>
-              121, Clear Water Bay Road<br />
-            Clear Water Bay, Kowloon<br />
-            HONG KONG<br />
               <i className="fa fa-phone"></i>: +91 9999955502<br />
               <i className="fa fa-fax"></i>: +91 9899639191<br />
               <i className="fa fa-envelope"></i>: <a href="mailto:propertystudio.chandra@gmail.com">propertystudio.chandra@gmail.com</a><br />

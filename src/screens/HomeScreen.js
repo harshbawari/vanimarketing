@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import HeaderComponent from '../components/HeaderComponent';
-import HomePageImg from '../assets/images/img.jpg';
-import Img2 from '../assets/images/img2.jpg';
+import Navbar from '../components/Navbar';
 import dummyImage from '../assets/images/atulyas/0001.jpg';
 import '../styles/HomeScreen.css';
 
@@ -43,7 +42,7 @@ function HomeScreen(props) {
         console.log('map');
         console.log('image: ', image);
         return (
-            <div key={index.toString()} className='container-fluid'>
+            <div key={index.toString()} className='row row-content'>
                 <div className='col-12'>
                     <img
                         src={image}
@@ -55,8 +54,8 @@ function HomeScreen(props) {
     });
 
     return (
-        <div className='container-fluid'>
-            <HeaderComponent />
+        <div>
+            <Navbar />
 
             <div className='container-fluid'>
                 {loading

@@ -15,13 +15,13 @@ function Navbar() {
 
 
     return (
-        <>
+        <div className='container-fluid'>
             <nav className="navbar primary_background">
                 <div className="navbar-container">
                     <div className='row'>
-                        <div className='col-4 col-md-2'>
+                        <div className='col-2 col-md-2'>
                             <Link to="/">
-                                <h1><img src={logo} width='270' height='180' /></h1>
+                                <h1><img src={logo} width='200' height='180' /></h1>
                             </Link>
                         </div>
                     </div>
@@ -50,7 +50,7 @@ function Navbar() {
                     </ul>
                 </div>
             </nav>
-        </>
+        </div>
     );
 }
 

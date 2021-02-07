@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import HeaderComponent from '../components/HeaderComponent';
 import Navbar from '../components/Navbar';
-import '../styles/HomeScreen.css';
+import '../styles/UnderConstructionScreen.css';
 
 const importAll = (r) => {
   let images = [];
@@ -11,18 +11,20 @@ const importAll = (r) => {
 
   return images;
 }
-const imgs = require.context('../assets/images/atulyas', false, /\.(jpg)$/);
+const bazar93 = require.context('../assets/images/under_construction/bazar93', false, /\.(jpg)$/);
+const superbia = require.context('../assets/images/under_construction/superbia', false, /\.(jpg)$/);
+const bazar89 = require.context('../assets/images/under_construction/bazar', false, /\.(jpg)$/);
+const millenia = require.context('../assets/images/under_construction/millenia', false, /\.(jpg)$/);
 
 
-
-function FlatsScreen(props) {
+function UnderConstructionScreen(props) {
   const [loading, setLoading] = useState(true);
   const [imgList, setImgList] = useState([]);
 
 
   useEffect(() => {
     const loadImages = () => {
-      setImgList(importAll(imgs));
+      setImgList([...importAll(bazar93), ...importAll(superbia), ...importAll(bazar89), ...importAll(millenia)]);
       setLoading(false);
 
     }
@@ -57,4 +59,4 @@ function FlatsScreen(props) {
   );
 }
 
-export default FlatsScreen;
+export default UnderConstructionScreen;

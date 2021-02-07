@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import HeaderComponent from '../components/HeaderComponent';
 import Navbar from '../components/Navbar';
-import '../styles/HomeScreen.css';
+import '../styles/CommercialsScreen.css';
 
 const importAll = (r) => {
   let images = [];
@@ -11,18 +11,19 @@ const importAll = (r) => {
 
   return images;
 }
-const imgs = require.context('../assets/images/atulyas', false, /\.(jpg)$/);
+const superbia = require.context('../assets/images/commercial/superbia', false, /\.(jpg)$/);
+const bazar89 = require.context('../assets/images/commercial/bazar', false, /\.(jpg)$/);
+const millenia = require.context('../assets/images/commercial/millenia', false, /\.(jpg)$/);
 
 
-
-function FlatsScreen(props) {
+function CommercialsScreen(props) {
   const [loading, setLoading] = useState(true);
   const [imgList, setImgList] = useState([]);
 
 
   useEffect(() => {
     const loadImages = () => {
-      setImgList(importAll(imgs));
+      setImgList([...importAll(superbia), ...importAll(bazar89), ...importAll(millenia)]);
       setLoading(false);
 
     }
@@ -57,4 +58,4 @@ function FlatsScreen(props) {
   );
 }
 
-export default FlatsScreen;
+export default CommercialsScreen;

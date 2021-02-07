@@ -1,20 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import HeaderComponent from '../components/HeaderComponent';
 import Navbar from '../components/Navbar';
-import dummyImage from '../assets/images/atulyas/0001.jpg';
 import '../styles/HomeScreen.css';
 
 const importAll = (r) => {
     let images = [];
     r.keys().map((item, index) => {
-        console.log('item: ', r(item).default);
         images.push(r(item).default);
     });
 
     return images;
 }
-const imgs = require.context('../assets/images/atulyas', false, /\.(jpg)$/);
-
+const atulyas = require.context('../assets/images/homepage/atulyas', false, /\.(jpg)$/);
+const gls = require.context('../assets/images/homepage/gls', false, /\.(jpg)$/);
 
 
 function HomeScreen(props) {
@@ -22,15 +20,9 @@ function HomeScreen(props) {
     const [imgList, setImgList] = useState([]);
 
 
-
-    console.log('dummyImage: ', dummyImage);
-    console.log('imgs: ', imgs);
-    console.log('imgList: ', imgList);
-    console.log('loading: ', loading);
-
     useEffect(() => {
         const loadImages = () => {
-            setImgList(importAll(imgs));
+            setImgList([...importAll(atulyas), ...importAll(gls)]);
             setLoading(false);
 
         }
@@ -39,8 +31,6 @@ function HomeScreen(props) {
     }, []);
 
     const renderImages = imgList.map((image, index) => {
-        console.log('map');
-        console.log('image: ', image);
         return (
             <div key={index.toString()} className='row row-content'>
                 <div className='col-12'>

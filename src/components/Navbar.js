@@ -33,13 +33,13 @@ function Navbar() {
                             <Link to='/' className='nav-links' onClick={toggleMenu}>Home</Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/' className='nav-links' onClick={toggleMenu}>Flats</Link>
+                            <Link to='/plots' className='nav-links' onClick={toggleMenu}>Plots</Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/' className='nav-links' onClick={toggleMenu}>Plots</Link>
+                            <Link to='/commercial' className='nav-links' onClick={toggleMenu}>Commercial</Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='/' className='nav-links' onClick={toggleMenu}>Shops</Link>
+                            <Link to='/under_construction' className='nav-links' onClick={toggleMenu}>Under Contruction</Link>
                         </li>
                         <li className='nav-item'>
                             <Link to='/' className='nav-links' onClick={toggleMenu}>Upcoming</Link>
